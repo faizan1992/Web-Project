@@ -1,0 +1,299 @@
+/*font*/
+@font-face{
+	font-family: BaiJamjuree-Medium;
+	src:  url(../fonts/Bai_Jamjuree/BaiJamjuree-Medium.ttf);
+}
+
+@font-face{
+	font-family: BaiJamjuree-Bold;
+	src:  url(../fonts/Bai_Jamjuree/BaiJamjuree-Bold.ttf);
+}
+
+
+*{
+	font-family: BaiJamjuree-Medium;
+}
+
+h1{
+	font-family: BaiJamjuree-Bold;
+	font-size: 40px;
+	font-weight: 900;
+}
+
+h3{
+	font-family: BaiJamjuree-Bold;
+}
+
+/*bottom margin for div universal class*/
+.div_bottom{
+	margin-bottom: 10px;
+}
+
+/*body*/
+body{
+	margin: 0;
+}
+
+#container{
+	overflow-x: hidden;
+}
+
+.uni-padding{
+	padding: 0 13% 0 13%;
+}
+
+/*header*/
+
+header{
+	background-image: url("../images/Contact Us/Contact UsBanner.jpg");
+	padding-top: 15px;
+	height: 485px;
+}
+
+/*navbar*/
+.nav-link{
+	color: #c7c6c5 !important;
+}
+.nav-link:hover{
+	color: #c48444 ;
+}
+.nav-link a:active{
+	color: #c48444 ;
+}
+
+.dropdown-menu{
+	border-radius: 12px;
+	padding: 14px;
+}
+
+.dropdown-item{
+	border-bottom: 2px #eaeaeb solid;
+	color: #a9a9a9;
+	font-size: 16px;
+	padding: 10px;
+}
+
+.dropdown-item:hover{
+	color: #cc8947;
+	font-weight: 900;
+}
+
+
+#contact-us-button{
+	background-color: #160b01;
+	color: white;
+	border: 2px #c5344c solid;
+	border-radius: 8px;
+	padding: 8px 30px 8px 30px;
+	font-size: 18px;
+	margin-top: 15px;
+	float: right;
+}
+
+.nav-link{
+	margin-left: 20px;
+}
+
+#contact_us_list{
+	display: none;
+}
+
+header h1{
+	color: white;
+}
+
+header p{
+	color: #f5f4f4;
+}
+
+#header_slider{
+	margin-top: 30px;
+}
+#header_slider h1{
+	margin-top: 40px;
+}
+#header_slider img{
+	margin-top: 40px;
+}
+
+/*third section for blog*/
+#third-section{
+	color: #333333;
+	padding-top: 60px;
+	padding-bottom: 10px;
+}
+
+#third-section p{
+	color: #666666;
+	font-size: 16px;
+	margin: 20px auto 25px 20px;
+}
+
+#third-section h3{
+	color: #bf344b;
+	font-size: 22px;
+	margin: 20px auto 28px 20px;
+}
+
+
+/*third section for blog detail*/
+#blog_detail_third-section{
+	color: #333333;
+	padding-top: 60px;
+	padding-bottom: 10px;
+}
+
+#blog_detail_third-section p{
+	color: #666666;
+	font-size: 14px;
+	margin: 20px auto 25px 0px;
+}
+
+#blog_detail_third-section h3{
+	color: #333333;
+	font-size: 24px;
+	margin: 20px auto 28px 20px;
+}
+
+#detail_p{
+	font-size: 17px !important;
+}
+#comment_p{
+	color: #333333!important;
+	font-size: 17px!important;
+}
+.info{
+	background-color: #f9f8f8;
+	padding: 10px 28px 10px 28px;
+	margin-bottom: 30px;
+}
+
+.info p{
+	line-height: 28px;
+	color: #7f7f7f!important;
+}
+
+
+.date_blog_detail{
+	display: block;
+	font-size: 12px!important;
+	margin-left: 55px;
+	margin-top: -18px;
+	margin-bottom: 15px;
+}
+
+.nine-section_box{
+	background: #fff;s
+	padding: 30px;
+	border:1px solid #e1e1e1;
+}
+
+.nine-section_box::placeholder {
+    color: #666666;/* Firefox */
+}
+
+.nine-section_box::-ms-input-placeholder { /* Internet Explorer 10-11 */
+ 	color: #666666;
+}
+
+.nine-section_box::-ms-input-placeholder { /* Microsoft Edge */
+    color: #666666;
+}
+.nine-section_message{ 
+	padding-bottom: 130px;
+	padding-top: 20px; 
+}
+
+#nine-section-read-more{
+	color: white;
+	background-color: #bf344b;
+	border: 1px #e3a6b1 solid;
+	border-radius: 6px;
+	padding: 15px 40px 15px 40px;
+	margin-top: 25px;
+	margin-bottom: 20px;
+}
+
+#social_icon a{
+	padding: 2px;
+}
+/*ten section*/
+#ten-section{
+	background-image: url("../images/Assets/footer.jpg");
+	padding-top: 50px;
+	color: #c4c3c2;
+}
+
+#ten-section h1{
+	color: #bd3249;
+	font-size: 19px;
+}
+
+#ten-section p{
+	font-size: 13px;
+}
+
+#ten-section ul {
+  list-style-type: none;
+  padding: 0;
+  font-size: 13px;
+}
+#ten-section ul li{
+  padding: 5px;
+}
+#ten-section ul a{
+  color: #c4c3c2;
+  text-decoration: none;
+}
+
+.footer{
+	border:1px #2e241d solid;
+	padding: 25px 0px 25px 0px;
+	border-left-style: hidden;
+	border-right-style: hidden;
+}
+
+.footer h1{
+	color: white !important;
+}
+
+#copyright{
+	font-size: px ;
+	padding: 25px 0px 25px 0px;
+}
+
+#copyright p{
+	font-size: 15px ;
+}
+
+
+	/*media query for mobile*/
+
+	@media only screen and (max-width: 768px) {
+
+		    header{
+		        background-size: 100% 625px;
+		    }
+
+		  #contact_us_list {
+		    display: block;
+		    background-color: #160b01;
+				color: white;
+				border: 2px #c5344c solid;
+				border-radius: 8px;
+				font-size: 18px;
+		  }
+		  #contact_us_list_button{
+		  	display: none;
+		  }
+		  .mobile_width{
+		  	width: 100%;
+		  }
+		  header{
+			height: 590px;
+		}
+
+
+	}
+
+
