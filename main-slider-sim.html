@@ -1,0 +1,468 @@
+
+<style>
+
+.mySlidess {display: none}
+
+/* Slideshow container */
+.slideshow-containers {
+  position: relative;
+  margin: auto;
+  color: white;
+}
+
+.slider1{
+  margin-top: 60px;
+}
+
+.slider1 h1{
+  font-size: 45px;
+}
+
+.slider1 p{
+  color: #eae9e9;
+  font-size: 15px;
+}
+
+#button{
+  color: white;
+  background-image: linear-gradient(to bottom right, #c5344c, #cb8847);
+  border-radius: 6px;
+  padding: 15px 40px 15px 40px;
+  margin-top: 25px;
+  margin-bottom: 45px;
+}
+
+/* Next & previous buttons */
+.prev1, .next1 {
+  cursor: pointer;
+  position: absolute;
+  top: 45%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 22px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+.prev1{
+  left: 0px;
+}
+/* Position the "next button" to the right */
+.next1 {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev1:hover, .next1:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #bd3249;
+  width: 3%;
+  border-radius: 30%;
+}
+
+/* Fading animation */
+.fades {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fades {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev1, .next1,.text {font-size: 11px}
+}
+
+.rightward{
+  
+  transform: translateX(100%);
+  opacity: 0;
+  animation: slide-in-anim 1.8s ease-out forwards;
+}
+
+@keyframes slide-in-anim {
+  20% {
+    opacity: 0;
+  }
+  60% {
+    transform: translateX(2%);
+  }
+  75% {
+    transform: translateX(6%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(5%);
+  }
+
+}
+
+
+.animate-reveal {
+  opacity: 0;
+  -webkit-animation: reveal 1.5s cubic-bezier(0, 1, 0.5, 1) 1 normal forwards;
+     -moz-animation: reveal 1.5s ease-in 1 normal forwards;
+       -o-animation: reveal 1.5s cubic-bezier(0, 1, 0.5, 1) 1 normal forwards;
+          animation: reveal 1.5s cubic-bezier(0, 1, 0.5, 1) 1 normal forwards;
+}
+
+.animate-first {
+  -webkit-animation-delay: 0;
+     -moz-animation-delay: 0;
+       -o-animation-delay: 0;
+          animation-delay: 0;
+}
+
+.animate-second {
+  -webkit-animation-delay: 500ms;
+     -moz-animation-delay: 500ms;
+       -o-animation-delay: 500ms;
+          animation-delay: 500ms;
+}
+
+.animate-third {
+  -webkit-animation-delay: 1s;
+     -moz-animation-delay: 1s;
+       -o-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.animate-fourth {
+  -webkit-animation-delay: 1s;
+     -moz-animation-delay: 1s;
+       -o-animation-delay: 1s;
+          animation-delay: 1.5s;
+}
+
+
+@-webkit-keyframes reveal {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(100%);
+       -moz-transform: translateY(100%);
+         -o-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+       -moz-transform: translateY(0);
+         -o-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@-moz-keyframes reveal {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(100%);
+       -moz-transform: translateY(100%);
+         -o-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+       -moz-transform: translateY(0);
+         -o-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@-o-keyframes reveal {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(100%);
+       -moz-transform: translateY(100%);
+         -o-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+       -moz-transform: translateY(0);
+         -o-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes reveal {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(100%);
+       -moz-transform: translateY(100%);
+         -o-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+       -moz-transform: translateY(0);
+         -o-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+.mobile_slider{
+    display: none;
+}
+@media screen and (max-width: 767px) {
+  .mySlidess{
+    text-align: center;
+  }
+  .slider1 h1{
+    font-size: 30px;
+  }
+  .slider1{
+    display: none;
+  }
+  .slider1{
+    margin: 2px;
+  }
+  .mobile_slider{
+      display: block;
+  }
+  .slider1 .hover_div{
+      margin-top: 40px;
+  }
+
+  .slider1 .hover_div img{
+      width: 80%;
+  }
+  #button{
+    color: white;
+    background-image: linear-gradient(to bottom right, #c5344c, #cb8847);
+    border-radius: 6px;
+    padding: 15px 40px 15px 40px;
+    margin-top: 10px;
+    margin-bottom: 100px;
+  }
+  .prev1, .next1 {
+      top: 29%;
+      margin-top: -22px;
+      font-size: 30px;
+  }
+
+
+}
+
+@media screen and (max-width: 1220px) {
+  #trust_by{
+    display: none;
+  }
+  #trust_by_width{
+    height: 50px;
+  }
+}
+</style>
+
+<div class="slideshow-containers uni-padding">
+
+<div class="mySlidess fades">
+  <div class="col-md-12">
+    <div class="row">
+      <div class="col-md-6 slider1">
+        <h1 class="animate-reveal animate-first">Our Professional Secret<br>Simplifies Tech for You.</h1><br>
+        <p class="animate-reveal animate-second">Cognic Labs provides a fully managed services that combines high-quality design, materials, and development into a single, stress-free experience.</p>
+        <div class="animate-reveal animate-third">
+            <a href="#" class="btn-banner btn-hover" id="button">Let's Discuss<span></span></a>
+        </div>
+        <p>
+          <div class="col-md-12 animate-reveal animate-fourth" id="trust_by_width">
+            <div class="row" id="trust_by">
+              <div class="col-md-3">
+                <b> Trusted by </b> 
+              </div>
+              <div class="col-md-2 hover_div">
+                <img src="images/layer_1.png" class="img-fluid"> 
+              </div>
+              <div class="col-md-2 hover_div">
+                <img src="images/layer_2.png" class="img-fluid"> 
+              </div>
+              <div class="col-md-2 hover_div">
+                <img src="images/layer_3.png" class="img-fluid"> 
+              </div>
+              <div class="col-md-3 hover_div">
+                <img src="images/layer_4.png" class="img-fluid"> 
+              </div>
+            </div>
+          </div>
+        </p>
+      </div>
+      <div class="col-md-6 hover_div">
+        <img src="images/Assets/Main banner image.png" class="img-fluid rightward">
+      </div>
+
+      <div class="col-md-6 slider1 mobile_slider">
+        <h1 class="animate-reveal animate-first">Our Professional Secret<br>Simplifies Tech for You.</h1><br>
+        <p class="animate-reveal animate-second">Cognic Labs provides a fully managed services that combines high-quality design, materials, and development into a single, stress-free experience.</p>
+        <div class="animate-reveal animate-third">
+            <a href="#" class="btn-banner btn-hover" id="button">Let's Discuss<span></span></a>
+        </div>
+        <p>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="mySlidess fades">
+  <div class="col-md-12">
+    <div class="row">
+      <div class="col-md-6 slider1">
+        <h1 class="animate-reveal animate-first">Our Professional Secret<br>Simplifies Tech for You.</h1><br>
+        <p class="animate-reveal animate-second">Cognic Labs provides a fully managed services that combines high-quality design, materials, and development into a single, stress-free experience.</p>
+        <div class="animate-reveal animate-third">
+            <a href="#" class="btn-banner btn-hover" id="button">Let's Discuss<span></span></a>
+        </div>
+        <p>
+          <div class="col-md-12 animate-reveal animate-fourth">
+            <div class="row">
+              <div class="col-md-3">
+                <b> Trusted by </b> 
+              </div>
+              <div class="col-md-2 hover_div">
+                <img src="images/layer_1.png" class="img-fluid"> 
+              </div>
+              <div class="col-md-2 hover_div">
+                <img src="images/layer_2.png" class="img-fluid"> 
+              </div>
+              <div class="col-md-2 hover_div">
+                <img src="images/layer_3.png" class="img-fluid"> 
+              </div>
+              <div class="col-md-3 hover_div">
+                <img src="images/layer_4.png" class="img-fluid"> 
+              </div>
+            </div>
+          </div>
+        </p>
+      </div>
+      <div class="col-md-6 hover_div">
+        <img src="images/Assets/Main banner image.png" class="img-fluid rightward">
+      </div>
+
+      <div class="col-md-6 slider1 mobile_slider">
+        <h1 class="animate-reveal animate-first">Our Professional Secret<br>Simplifies Tech for You.</h1><br>
+        <p class="animate-reveal animate-second">Cognic Labs provides a fully managed services that combines high-quality design, materials, and development into a single, stress-free experience.</p>
+        <div class="animate-reveal animate-third">
+            <a href="#" class="btn-banner btn-hover" id="button">Let's Discuss<span></span></a>
+        </div>
+        <p>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="mySlidess fades">
+  <div class="col-md-12">
+    <div class="row">
+      <div class="col-md-6 slider1">
+        <h1 class="animate-reveal animate-first">Our Professional Secret<br>Simplifies Tech for You.</h1><br>
+        <p class="animate-reveal animate-second">Cognic Labs provides a fully managed services that combines high-quality design, materials, and development into a single, stress-free experience.</p>
+        <div class="animate-reveal animate-third">
+            <a href="#" class="btn-banner btn-hover" id="button">Let's Discuss<span></span></a>
+        </div>
+        <p>
+          <div class="col-md-12 animate-reveal animate-fourth">
+            <div class="row">
+              <div class="col-md-3">
+                <b> Trusted by </b> 
+              </div>
+              <div class="col-md-2 hover_div">
+                <img src="images/layer_1.png" class="img-fluid"> 
+              </div>
+              <div class="col-md-2 hover_div">
+                <img src="images/layer_2.png" class="img-fluid"> 
+              </div>
+              <div class="col-md-2 hover_div">
+                <img src="images/layer_3.png" class="img-fluid"> 
+              </div>
+              <div class="col-md-3 hover_div">
+                <img src="images/layer_4.png" class="img-fluid"> 
+              </div>
+            </div>
+          </div>
+        </p>
+      </div>
+      <div class="col-md-6 hover_div">
+        <img src="images/Assets/Main banner image.png" class="img-fluid rightward">
+      </div>
+
+      <div class="col-md-6 slider1 mobile_slider">
+        <h1 class="animate-reveal animate-first">Our Professional Secret<br>Simplifies Tech for You.</h1><br>
+        <p class="animate-reveal animate-second">Cognic Labs provides a fully managed services that combines high-quality design, materials, and development into a single, stress-free experience.</p>
+        <div class="animate-reveal animate-third">
+            <a href="#" class="btn-banner btn-hover" id="button">Let's Discuss<span></span></a>
+        </div>
+        <p>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<a class="prev1" onclick="plusSlides(-1)">❮</a>
+<a class="next1" onclick="plusSlides(1)">❯</a>
+
+</div>
+<br>
+<!-- 
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div> -->
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlidess");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
